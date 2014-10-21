@@ -7,10 +7,8 @@ import android.content.DialogInterface.OnDismissListener;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
-public abstract class MyAsyncTask<Params, Progress, Result> extends
-		AsyncTask<Params, Progress, Result> {
-
-	private final String TAG = MyAsyncTask.class.getName();
+public abstract class MyAsyncTask<Params, Progress, T> extends
+		AsyncTask<Params, Progress, T> {
 	private Context mContext;
 	/** 是否显示Toast */
 	private boolean isShowToast;
@@ -65,7 +63,7 @@ public abstract class MyAsyncTask<Params, Progress, Result> extends
 	}
 
 	@Override
-	protected void onPostExecute(Result result) {
+	protected void onPostExecute(T result) {
 		if (mDialog != null && mDialog.isShowing()) {
 			mDialog.dismiss();
 		}

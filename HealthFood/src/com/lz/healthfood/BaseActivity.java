@@ -6,11 +6,13 @@ import android.content.Context;
 import android.widget.Toast;
 
 public class BaseActivity extends Activity {
+	protected String TAG = this.getClass().getSimpleName();
 	protected Context mContext;
 
 	public BaseActivity() {
 		mContext = this;
 	}
+
 	@Override
 	public void onDestroy() {
 		super.onDestroy();

@@ -32,10 +32,8 @@ public class NetManager {
 	public static final String ENCODING = "UTF-8";
 	public static final String HTTP_SAFETY_SCHEME = "https";
 	public static final String HTTP_SCHEME = "http";
-
-	public static final String METHOD = "aosservice.aspx";
 	/** 请求接口 */
-	public static final String HTTP_HOST = "erpapi.test.fang.com/";
+	public static final String HTTP_HOST = "api.yi18.net/food/";
 	public static final String HTTP_URL = HTTP_SCHEME + "://" + HTTP_HOST;
 	private HttpClient client;
 
